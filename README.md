@@ -16,6 +16,9 @@ An SDK for A/B Testing, Analytics, and Feature Flags on Roku Channels
 
 To add the Taplytics SDK to a roku channel, first copy the `taplytics` folder into the channel's `/components` directory.
 
+To see demo running, zip the contents of /source folder and sideload to your Roku device.
+
+
 ### Initialization
 
 Define the Taplytics API and SDK key in the scene component XML file of your channel:
@@ -46,6 +49,13 @@ Globally referencing the Taplytics SDK can be acheived by using a global data sc
 
 https://sdkdocs.roku.com/display/sdkdoc/SceneGraph+Data+Scoping
 
+For easier access to the taplytics api the client config is loaded into the m.global. This is usefull for deeply next objects and tasks.
+
+```brightscript
+m.global.taplyticsReady = true  'Indicates that the client info has been loaded
+
+print m.global.taplyticsInfo  ' Associative array with all test and variable data
+```
 
 ## Running Experiment Information
 

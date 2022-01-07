@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<!--********** Copyright 2016 Roku Corp.  All Rights Reserved. **********-->
 
 <!-- main node which handles home screen children -->
 <component name="HomeScene" extends="Scene"  xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
@@ -8,6 +7,26 @@
     </interface>
 
     <children>
+      <SimpleLabel
+        id="testLabel"
+        font="fontUri:MediumBoldSystemFont"
+        text = "To see full test output check debug output via telnet..."
+        horizOrigin = "left"
+        vertOrigin = "baseline"
+        translation="[64,50]" />
+
+      <Label
+        id="log"
+        height="0"
+        numLines="0"
+        maxLines="20"
+        width="1200"
+        font="font:SmallestSystemFont"
+        text = ""
+        horizAlign = "left"
+        vertAlign = "center"
+        wrap="true"
+        translation="[318,88]" />
 
       <TaplyticsAPI
           id="TaplyticsAPI"
@@ -16,4 +35,6 @@
           HTTP_RETRIES="5"/>
 
     </children>
+
+     <script type="text/brightscript" uri="./HomeScene.brs"/>
 </component>
